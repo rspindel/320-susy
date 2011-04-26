@@ -1,0 +1,91 @@
+// 1382 Grid -----------------------------------------------------------------
+
+$total-cols         : 24
+$col-width          : 2em
+$gutter-width       : 1em
+$side-gutter-width  : $gutter-width
+
+/* 1382px --------------------------------------------------------------------
+@media only screen and (min-width: 1382px)
+
+  /* Root --------------------------------------------------------------------
+
+  body
+    > div
+      +container
+      +susy-grid-background
+
+  /* Layout ------------------------------------------------------------------
+
+  header[role="banner"]
+    +columns(4)
+    +prefix(2)
+    +alpha
+    border: 0
+    h1
+      +transform(rotate(7deg) scale(1.3))
+
+  div[role="main"]
+    +un-column
+    +full
+    +pie-clearfix
+    +leading-border($base-line-height*4,5)
+    border-top-color: rgba($base-dark,.125)
+    font: inherit
+    clear: none
+    margin:
+      left: columns(6) + side-gutter() + gutter()
+      right: columns(4) + side-gutter() + gutter()
+    p
+      +trailer
+    article
+      +padding-leader
+    div
+      +un-column
+      +full(14)
+      +pie-clearfix
+      +trailing-border(6px,.5)
+      +trailer(.5)
+      text-align: left
+      &::before
+        display: none
+      p
+        +columns(6,14)
+        min-height: 0
+        &:last-child
+          +omega(14)
+          position: relative
+          &::before
+            +adjust-font-size-to(132px,2.5)
+            display: block
+            position: absolute
+            top: 0
+            left: - columns(2,6) - gutter(6)
+            content: "+"
+            font-weight: bold
+            text-align: center
+      + p
+        +un-column
+        +full(14)
+        +padding-trailer(2)
+        margin:
+          top: 0
+          bottom: 0
+
+  footer[role="contentinfo"]
+    padding: 0
+    .author
+      +container
+      +susy-grid-background
+      +padding-trailer
+    p
+      +full
+      margin:
+        left: columns(6) + side-gutter() + gutter()
+        right: columns(4) + side-gutter() + gutter()
+      text-align: right
+      &:first-child
+        +leading-border($base-line-height*4,5,14px)
+        border-color: rgba($base-dark,.125)
+      &:last-child
+        +padding-trailer(1,14px)

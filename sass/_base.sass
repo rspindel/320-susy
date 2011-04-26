@@ -1,0 +1,78 @@
+// Imports -------------------------------------------------------------------
+
+@import compass
+@import compass/layout
+@import susy
+
+// Settings ------------------------------------------------------------------
+
+$legacy-support-for-ie6         : false
+
+$show-column-grid-backgrounds   : true
+$show-baseline-grid-backgrounds : false
+$show-grid-backgrounds          : true
+
+// Font Sizes ----------------------------------------------------------------
+
+$base-font-size   : 24px
+$base-line-height : $base-font-size*1.5
+
+// Colors --------------------------------------------------------------------
+
+$base         : desaturate(#005498,80)
+$base-dark    : darken($base,35)
+$base-light   : lighten($base,15)
+$base-lighter : lighten($base,35)
+
+$alt-dark     : desaturate(#e11,40)
+$alt          : lighten($alt-dark,25)
+
+$dark   : mix(black,$base)
+$light  : mix(white,$base)
+$mid    : mix($dark,$light)
+$accent : $light
+
+$contrasted-dark-default  : $base
+$contrasted-light-default : $light
+
+$grid-background-baseline-color : rgba($base-light, 0.125)
+$grid-background-column-color   : rgba($base-light, 0.125)
+$grid-background-gutter-color   : rgba($base-light, 0)
+
+// Fonts ---------------------------------------------------------------------
+
+=sans-family
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+
+=serif-family
+  font-family: georgia, serif
+
+=monospace-family
+  font-family: "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, Courier, monospace, sans-serif
+
+// Mixins --------------------------------------------------------------------
+
+=hpadding($l:rhythm(),$r:$l)
+  padding:
+    left: $l
+    right: $r
+
+=gone
+  position: absolute
+  clip: rect(0 0 0 0)
+  overflow: hidden
+  margin: -1px
+  padding: 0
+  height: 1px
+  width: 1px
+  border: 0
+
+=oncall
+  +gone
+  &:active, &:focus
+    position: static
+    clip: auto
+    overflow: visible
+    height: auto
+    margin: 0
+    width: auto

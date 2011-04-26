@@ -1,0 +1,42 @@
+// 480 Grid ------------------------------------------------------------------
+
+$total-cols         : 4
+$col-width          : 4em
+$gutter-width       : 1em
+$side-gutter-width  : 1em
+
+/* 480px ---------------------------------------------------------------------
+@media only screen and (min-width: 480px)
+
+  /* Root --------------------------------------------------------------------
+
+  body
+    > div
+      +container
+      +susy-grid-background
+
+  /* Layout ------------------------------------------------------------------
+
+  header[role="banner"]
+    +columns(1)
+    +alpha
+    h1
+      +adjust-font-size-to(16px)
+      +leader(.25,16px)
+      &::before
+        +adjust-font-size-to(16px,1,36px)
+      &::before
+        +adjust-font-size-to(60px,1.5,16px)
+
+  div[role="main"]
+    +columns(3)
+    +omega
+    +hpadding(0)
+
+  footer[role="contentinfo"]
+    +hpadding(0)
+    .author
+      +container
+    p
+      +full
+      +prefix(1)

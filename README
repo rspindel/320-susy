@@ -1,0 +1,15 @@
+320+Susy
+========
+
+[320 and up](http://stuffandnonsense.co.uk/projects/320andup/) is a 'tiny screen first' boilerplate extension by Andy Clarke.
+
+[Susy](http://susy.oddbird.net/) is a flexible grid-building tool by Eric Meyer, built in Compass/Sass.
+
+This is an example of how one might use them together, to build different grids for different devices on one site.
+
+Notes:
+-------
+
+* There is more code here than is needed. I left most of my default boilerplate styles in place. That could be optimized more, if I cared.
+
+* I'm not happy with my current handling of IE 7-8. I could, in this case, use [respond.js](https://github.com/scottjehl/Respond) as recommended by Andy, but I don't like the same-domain restrictions in my production sites.

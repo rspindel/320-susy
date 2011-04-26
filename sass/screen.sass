@@ -1,0 +1,33 @@
+// Imports -------------------------------------------------------------------
+
+@import defaults
+
+/* Layout --------------------------------------------------------------------
+body
+  > div
+    +padding-leader
+
+div[role="main"]
+  padding: 0 rhythm(.5)
+
+footer[role="contentinfo"]
+  +padding-leader(.5)
+  +padding-trailer(.5)
+  +hpadding(rhythm(.5))
+  font-style: italic
+  background: rgba($base-dark,.125)
+  p
+    +adjust-font-size-to(14px)
+    margin: 0
+
+// Media Queries -------------------------------------------------------------
+
+@import media/480
+@import media/768
+@import media/992
+@import media/1382
+//@import media/2x
+
+// IE ------------------------------------------------------------------------
+
+@import media/ie

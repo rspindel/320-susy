@@ -1,0 +1,65 @@
+// 768 Grid ------------------------------------------------------------------
+
+$total-cols         : 12
+$col-width          : 2em
+$gutter-width       : 1em
+$side-gutter-width  : $gutter-width
+
+/* IE  --------------------------------------------------------------------
+.ie7, .ie8
+
+  // Root --------------------------------------------------------------------
+
+  body
+    > div
+      +container
+
+  // Layout ------------------------------------------------------------------
+
+  header[role="banner"]
+    +trailing-border(6px,1,$base-font-size,dotted)
+    margin: 0 columns(3) + side-gutter() + gutter() rhythm()
+    h1
+      +adjust-font-size-to(36px)
+      margin: 0
+      &::before
+        +adjust-font-size-to(16px,1,60px)
+      &::before
+        +adjust-font-size-to(108px,3,36px)
+
+
+  div[role="main"]
+    +full
+    +pie-clearfix
+    +adjust-font-size-to(21px)
+    +trailer(1,21px)
+    p
+      +trailer(1,21px)
+    div
+      +columns(5,12)
+      position: relative
+      padding-right: columns(1,12)
+      border-right: 4px solid $light
+      text-align: right
+      p + p
+        margin: 0
+      + p
+        +columns(5,12)
+        +omega(12)
+        +leader(1.5,21px)
+        padding-left: columns(1,12)
+        border-left: 4px solid $light
+
+  footer[role="contentinfo"]
+    +padding-leader(0)
+    +padding-trailer(2)
+    background-color: transparent
+    text-align: center
+    .author
+      +container
+      +column-grid-background($total-cols, $col-width, $gutter-width, $side-gutter-width)
+    p
+      margin: 0 columns(3) + side-gutter() + gutter()
+      padding: 0
+      &:first-child
+        +leading-border(6px,1,14px,dotted)
