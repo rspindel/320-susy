@@ -11,5 +11,3 @@ Notes:
 -------
 
 * There is more code here than is needed. I left most of my default boilerplate styles in place. That could be optimized more, if I cared.
-
-* I'm not happy with my current handling of IE 7-8. I could, in this case, use [respond.js](https://github.com/scottjehl/Respond) as recommended by Andy, but I don't like the same-domain restrictions in my production sites.
