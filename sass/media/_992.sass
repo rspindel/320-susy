@@ -5,35 +5,32 @@ $col-width          : 3em
 $gutter-width       : 1em
 $side-gutter-width  : $gutter-width
 
-/* 992px ---------------------------------------------------------------------
-@media only screen and (min-width: 992px)
+/* Root --------------------------------------------------------------------
 
-  /* Root --------------------------------------------------------------------
+body
+  > div
+    +container
+    +susy-grid-background
 
-  body
-    > div
-      +container
-      +susy-grid-background
+/* Layout ------------------------------------------------------------------
 
-  /* Layout ------------------------------------------------------------------
-
-  div[role="main"]
-    font: inherit
+div[role="main"]
+  font: inherit
+  p
+    +trailer(1)
+  div
     p
-      +trailer(1)
-    div
-      p
-        min-height: rhythm(3)
-      &::before
-        +adjust-font-size-to(24px,1,252px)
-      &::before
-        +adjust-font-size-to(504px,4)
-        content: "›"
-        text-indent: -.05em
-      + p
-        +leader(2)
+      min-height: rhythm(3)
+    &::before
+      +adjust-font-size-to(24px,1,252px)
+    &::before
+      +adjust-font-size-to(504px,4)
+      content: "›"
+      text-indent: -.05em
+    + p
+      +leader(2)
 
-  footer[role="contentinfo"]
-    .author
-      +container
-      +susy-grid-background
+footer[role="contentinfo"]
+  .author
+    +container
+    +susy-grid-background
